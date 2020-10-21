@@ -24,7 +24,7 @@
         <label for="definition_name">Definition:</label>
         <input id="definition_name" name="definition_name" class="form-control" type="text">
       </div>
-      <button type="submit" class="btn text-white" style="background-color:white">Add definition</button>
+      <button type="submit" class="btn text-white" style="background-color:#4471db">Add definition</button>
     </form>
 </div>
 
@@ -32,7 +32,7 @@
 <br/>
 
 <div class="card-body">
-  <a href="/words/<%= @word.id %>/edit">Edit the word</a>
+  <a href="/words/<%= @word.id %>/edit" style="background-color:#f2a218">Edit the word</a>
 </div>
 <div class="card-body">
   <form action="/words/<%= @word.id %>" method="post">
