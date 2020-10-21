@@ -1,0 +1,18 @@
+<div class="text-center">
+  <h1 class="text-white display-4">Words and Definitons!<h1>
+</div>
+
+<div class="card-body">
+  <h3 class="card-title">Your Word Collection</h3>
+  <% if @words.any? %>
+    <ul>
+      <% @words.each do |word| %>
+        <li><a style="color:white" href="/words/<%= word.id %>"><%= word.name %></a></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>There are currently no words to display.</p>
+  <% end %>
+
+  <a href="/words/new">Add a new word!</a> 
+</div>

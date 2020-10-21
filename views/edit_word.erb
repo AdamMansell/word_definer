@@ -1,0 +1,24 @@
+<br>
+<div class="row">
+<div class="card-body text-white">
+  <h3 class="card-title"> 
+    <%= @word.name %></span>    
+  </h3>
+</div>
+<div class="card shadow bg-light">
+<div class="card-body">
+  <form action="/words/<%= @word.id %>" method="post">
+    <input name="_method" type="hidden" value="patch">
+    <div class="form-group">
+      <label for="edit_word" class="card-text">Edit Word:</label>
+      <input id="edit_word" name="edit_word" class="form-control" type="text">
+    </div>
+    <button type="submit" class="btn" style="background-color:white">Update Word</button>
+  </form>
+</div>
+</div>
+<nav class="navbar fixed-bottom navbar-dark bg-dark text-center">
+  <button type="button" class="btn btn-success">
+    <a href="/words">View All Words!</a>
+  </button>
+</nav>
