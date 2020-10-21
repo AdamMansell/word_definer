@@ -9,10 +9,6 @@ class Word
     @id = attributes[:id] || @@total_number_of_words += 1
   end
 
-  # word1 = Word.new(name; 'Book', id: 1)
-  # word2 = Word.new(name; 'Book 2', id: 2)
-  # word1 == word2
-  # word1.==(word2)
   def ==(other_word)
     name == other_word.name && id == other_word.id
   end
@@ -24,9 +20,6 @@ class Word
   def update(name)
     @name = name
   end
-
-  # @word = Word.find(1)
-  # @word.delete
 
   def delete
     @@words.delete(id)
@@ -45,7 +38,7 @@ class Word
       @@words[id]
     end
 
-    def clear
+    def reset
       @@words = {}
       @@total_number_of_words = 0
     end

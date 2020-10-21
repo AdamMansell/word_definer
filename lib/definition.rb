@@ -1,6 +1,5 @@
 class Definition
-  attr_reader :id
-  attr_accessor :name, :word_id
+  attr_reader :id, :name, :word_id
 
   @@definitions = {}
   @@total_number_of_definitions = 0
@@ -46,7 +45,7 @@ class Definition
       @@definitions.values.select { |definition| definition.word_id == word_id }
     end
 
-    def clear
+    def reset
       @@definitions = {}
       @@total_number_of_definitions = 0
     end
